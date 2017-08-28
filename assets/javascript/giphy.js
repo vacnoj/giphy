@@ -1,4 +1,4 @@
-var topics = ["dog", "moose", "cow", "elephant", "horse"];
+var topics = ["dog", "moose", "cow", "elephant", "horse", "bear"];
 
 function displayGif() {
 
