@@ -7,6 +7,7 @@
 	margin-bottom: 5%;
 }
 
-.animal-button {
+.animal-button, #add-animal {
 	margin-right: 1%;
+	color: deepskyblue;
 }
