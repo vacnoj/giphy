@@ -10,7 +10,7 @@ function displayGif() {
 function makeButtons() {
 
 	for(var i = 0; i < topics.length; i++) {
-		var newButton = $('<button>').data('animal-name', topics[i]);
+		var newButton = $('<button class="animal-button">').data('animal-name', topics[i]);
 		$("#animal-row").append(newButton.text(topics[i]));
 
 		newButton.on('click', function() {

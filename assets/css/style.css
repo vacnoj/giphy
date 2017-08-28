@@ -1,3 +1,12 @@
 .gifs {
 	display: inline-block;
+	margin: 2%;
+}
+
+#animal-row {
+	margin-bottom: 5%;
+}
+
+.animal-button {
+	margin-right: 1%;
 }
