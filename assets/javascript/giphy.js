@@ -3,7 +3,7 @@ var topics = ["dog", "moose", "cow", "elephant", "horse", "bear"];
 function displayGif() {
 
 	var topic = $(this).attr("data-name");
-	var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=39e7a345963b47eaa46f52828d246ef1&q=" + topic + "&limit=25&offset=0&rating=G&lang=en";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=39e7a345963b47eaa46f52828d246ef1&q=" + topic + "&limit=10&offset=0&rating=G&lang=en";
 
 }
 
@@ -17,7 +17,7 @@ function makeButtons() {
 			console.log(this);
 			$("#animals-view").empty();
 			var animal = ($(this).data('animal-name'));
-			queryURL = "https://api.giphy.com/v1/gifs/search?api_key=39e7a345963b47eaa46f52828d246ef1&q=" + animal + "&limit=25&offset=0&rating=G&lang=en";
+			queryURL = "https://api.giphy.com/v1/gifs/search?api_key=39e7a345963b47eaa46f52828d246ef1&q=" + animal + "&limit=10&offset=0&rating=G&lang=en";
 
 		$.ajax({
 			url: queryURL,
@@ -25,9 +25,9 @@ function makeButtons() {
 			}).done(function(response) {
 				console.log(response);
 				
-				for (var k = 0; k < 25; k++) {
+				for (var k = 0; k < 10; k++) {
 					var newDiv = $('<div class="gifs">');
-					$("#animals-view").append(newDiv.append($('<iframe>', {src: response.data[k].embed_url})));
+					$("#animals-view").append(newDiv.append($('<iframe>', {src: response.data[k].embed_url}), '<br>', 'rating: ' + response.data[k].rating));
 				}
       		});
         });
