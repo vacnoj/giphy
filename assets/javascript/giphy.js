@@ -3,7 +3,7 @@ var topics = ["dog", "moose", "cow", "elephant", "horse", "bear"];
 function displayGif() {
 
 	var topic = $(this).attr("data-name");
-	var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=39e7a345963b47eaa46f52828d246ef1&q=" + topic + "&limit=10&offset=0&lang=en";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=39e7a345963b47eaa46f52828d246ef1&q=" + topic + "&limit=20&offset=0&lang=en";
 
 }
 
